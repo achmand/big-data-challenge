@@ -2,7 +2,7 @@
 version: "3.3"
 services:
   spark-master:
-    image: dylan/spark:latest
+    image: challenge/spark:latest
     container_name: spark-master
     hostname: spark-master
     ports:
@@ -16,7 +16,7 @@ services:
       - "SPARK_MASTER_WEBUI_PORT=8080"
     command: "/start-master.sh"
   spark-worker:
-    image: dylan/spark:latest
+    image: challenge/spark:latest
     depends_on:
       - spark-master
     ports:

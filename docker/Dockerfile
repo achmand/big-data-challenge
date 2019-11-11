@@ -22,3 +22,13 @@ COPY start-master.sh /start-master.sh
 # get/copy the start worker shell script to image. 
 # to make script executable (chmod +x start-worker.sh)
 COPY start-worker.sh /start-worker.sh 
+
+# to make script executable (chmod +x start-master.sh)
+COPY start-computation.sh /start-computation.sh 
+
+# copy jar file 
+COPY source.jar /source.jar 
+
+# copy data file 
+COPY data/ /data/ 
+
